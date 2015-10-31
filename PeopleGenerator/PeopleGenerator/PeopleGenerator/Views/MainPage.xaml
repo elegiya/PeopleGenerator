@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleGenerator.Views.MainPage">
+  
+   <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label"> 
+                <Setter Property="VerticalOptions"  Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+    
+    <Label x:Name="namelabel" Text="{Binding Name}" />
+    <Label x:Name="GenderLabel" Text="{Binding Gender}" />
+    <Label x:Name="nationalityLabel" Text="{Binding Nationality}" />
+    <Image x:Name="pathImage" Source="{Binding SourcePhoto}" />
+    
+  <Button x:Name="ChoosePersonButton" Text="Find person" Command="{Binding ChoosePersonCommand}" />
+    
+  </StackLayout>
+</ContentPage>
